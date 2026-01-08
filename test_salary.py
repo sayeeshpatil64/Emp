@@ -1,17 +1,16 @@
-import pytest
-from salary_slip import calculate_salary
+from employee import calculate_salary
 
 def test_hra():
     hra, da, pf, net = calculate_salary(10000)
-    assert hra == 2000   # 20%
+    assert hra == 2000
 
 def test_da():
     hra, da, pf, net = calculate_salary(10000)
-    assert da == 5000    # 50%
+    assert da == 5000
 
 def test_pf():
     hra, da, pf, net = calculate_salary(10000)
-    assert pf == 1100   # 11%
+    assert pf == 1100
 
 def test_net_salary():
     hra, da, pf, net = calculate_salary(10000)
